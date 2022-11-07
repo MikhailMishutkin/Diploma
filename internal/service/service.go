@@ -12,8 +12,8 @@ import (
 
 const (
 	answerTime   = 60 / 18
-	CountryFile  = "/mnt/c/go_work/src/GraduateWork/alpha2eng.txt"
-	ProviderFile = "/mnt/c/go_work/src/GraduateWork/providers.txt"
+	CountryFile  = "alpha2eng.txt"
+	ProviderFile = "providers.txt"
 )
 
 type ServiceManage struct {
