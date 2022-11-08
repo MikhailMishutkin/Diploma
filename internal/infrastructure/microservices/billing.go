@@ -11,7 +11,7 @@ import (
 //...
 func (m *MicroServiceStr) ReadBilling() (outputData model.BillingData) {
 
-	body, err := ioutil.ReadFile("/mnt/c/go_work/src/diplomaSB/billing.data")
+	body, err := ioutil.ReadFile("./simulator/billing.data")
 	if err != nil {
 		fmt.Print("error reading the billing data", err)
 	}

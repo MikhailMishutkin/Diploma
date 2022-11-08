@@ -11,8 +11,8 @@ import (
 )
 
 const (
-	CountryFile  = "/mnt/c/go_work/src/GraduateWork/alpha2eng.txt"
-	ProviderFile = "/mnt/c/go_work/src/GraduateWork/providers.txt"
+	CountryFile  = "alpha2eng.txt"
+	ProviderFile = "providers.txt"
 	Provider1    = "Topolo"
 	Provider2    = "Rond"
 	Provider3    = "Kildy"

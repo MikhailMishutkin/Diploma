@@ -12,7 +12,7 @@ import (
 func (m *MicroServiceStr) ReadVoiceCall() (outputData []model.VoiceCallData) {
 	a := model.VoiceCallData{}
 
-	content, err := os.Open("/mnt/c/go_work/src/diplomaSB/voice.data")
+	content, err := os.Open("./simulator/voice.data")
 	if err != nil {
 		fmt.Print(err)
 	}

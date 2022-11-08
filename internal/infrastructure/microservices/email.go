@@ -12,7 +12,7 @@ import (
 func (m *MicroServiceStr) ReadEmail() (outputData []model.EmailData) {
 	a := model.EmailData{}
 
-	content, err := os.Open("/mnt/c/go_work/src/diplomaSB/email.data")
+	content, err := os.Open("./simulator/email.data")
 	if err != nil {
 		fmt.Print(err)
 	}
