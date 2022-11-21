@@ -30,7 +30,7 @@ func NewHandler(s ServiceManager) *Handler {
 
 //...
 func (h *Handler) RegisterR(router *mux.Router) {
-	router.HandleFunc("/", h.HandleConnection)
+	router.HandleFunc("/api", h.HandleConnection)
 }
 
 //...
@@ -49,9 +49,11 @@ func (h *Handler) HandleConnection(w http.ResponseWriter, r *http.Request) {
 		result.Data = h.sm.GetResultData(&sync.WaitGroup{})
 	}
 
-	j, err := json.MarshalIndent(result.Data, "", "   ")
+	response, err := json.Marshal(result)
 	if err != nil {
 		result.Error = "Error on marshal data"
 	}
-	w.Write([]byte(j))
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+	w.Write(response)
+
 }
