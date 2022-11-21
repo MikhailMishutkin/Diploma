@@ -12,7 +12,7 @@ import (
 func (m *MicroServiceStr) ReadSMS() (outputData []model.SMSData) {
 	a := model.SMSData{}
 
-	content, err := os.Open("/mnt/c/go_work/src/diplomaSB/sms.data")
+	content, err := os.Open("./simulator/sms.data")
 	if err != nil {
 		fmt.Print(err)
 	}
